@@ -1,11 +1,13 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <html>
 <head>
-	<title>App Server</title>
+	<title>LOGIN</title>
+	<meta charset="UTF-8">
 </head>
 <body>
-<h1>
-	종화 앱 서버.(tomcat1, App_Server)
-</h1>
+	<h1>로그인</h1>
+	<form action="" method="post">
+		
+	</form>
 </body>
 </html>
