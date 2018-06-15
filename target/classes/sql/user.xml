@@ -9,4 +9,10 @@
 		values
 			(#{userEmail},#{userPassword},#{userName},DATE_FORMAT(NOW(),'%Y%m%d'))
 	</insert>
+	<select id="userSelect" parameterType="HashMap" resultType="HashMap">
+		select * from users
+		 where userEmail = #{userEmail}
+		   and userPassword = #{userPassword}
+		 limit 1
+	</select>
 </mapper>
