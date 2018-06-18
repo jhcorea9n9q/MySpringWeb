@@ -25,7 +25,9 @@
 							html += list[i].boardNo;
 							html += "'>";
 							html += list[i].boardTitle;
-							html += "</a>";
+							html += "</a><span> (유저명:";
+							html += list[i].userNo;
+							html += ") </span>"
 						/********************************************/
 							
 							html += "</li>";
@@ -38,7 +40,7 @@
 </head>
 
 <body>
-	<h1>리스트!</h1>
+	<h1><a href="/web">리스트!</a></h1>
 	<a href="bInsert">글 작성하기</a>
 	<ul id="list"></ul>
 </body>

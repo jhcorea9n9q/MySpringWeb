@@ -5,6 +5,7 @@ import java.util.HashMap;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import org.springframework.web.servlet.ModelAndView;
 
@@ -57,6 +58,28 @@ public class HttpUtil {
 			e.printStackTrace();
 		}
 		
+	}
+	
+	// 로그인을 체크하고 로그인 할때만 데이터베이스 접근하게 하기.
+	public static boolean loginCheck(HttpSession session) {
+		
+		if(session == null) {
+			System.out.println("세션 정보가 없습니다.");
+			return false;
+		}else {
+			HashMap<String, Object> userMap = (HashMap<String, Object>) session.getAttribute("user");
+			if(userMap == null) {
+				System.out.println("현재 로그인 되어있지 않습니다.");
+				return false;
+			}else {
+				System.out.println("****************************************************************");
+				for (String data : userMap.keySet()) {
+					System.out.println(data + ":" + userMap.get(data));
+				}
+				System.out.println("****************************************************************");
+				return true;
+			}
+		}
 	}
 
 }

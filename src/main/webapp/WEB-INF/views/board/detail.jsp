@@ -61,7 +61,7 @@
 	<div>
 		<a href="bList">리스트로 돌아가기</a>
 		<a href="bUpdate?boardNo=${param.boardNo}">내용 수정하기</a>
-		<a href="#">내용 삭제하기</a>
+		<a href="bDel?boardNo=${param.boardNo}">내용 삭제하기</a>
 	</div>
 	
 </body>

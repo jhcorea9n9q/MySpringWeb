@@ -64,4 +64,16 @@
 		 where fileNo = #{fileNo}
 	</update>
 	
+	<update id="boardDel" parameterType="HashMap">
+		update board
+		   set delYn = 'Y'
+		 where boardNo = #{boardNo}
+	</update>
+	
+	<update id="filesBoardDel" parameterType="HashMap">
+		update files
+		   set delYn = 'Y'
+		 where boardNo = #{boardNo}
+	</update>
+	
 </mapper>
